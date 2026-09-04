@@ -660,168 +660,62 @@ main {
 /* Home page intro and categories */
 .intro-section {
   max-width: 800px;
-  margin: 1.5rem auto 2.5rem auto;
+  margin: 2rem auto;
   text-align: center;
   color: var(--text-primary);
-  line-height: 1.7;
+  line-height: 1.6;
 }
-
 .intro-section h1 {
   font-family: var(--font-title);
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1.25rem;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #ffffff 30%, var(--color-primary-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
 }
-
-.intro-section p {
-  font-size: 0.98rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.85rem;
-  line-height: 1.7;
-}
-
-.intro-section p strong {
-  color: #ffffff;
-}
-
-/* Home Categories Grid (Desktop) */
 .home-categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.25rem;
-  max-width: 1040px;
-  margin: 2rem auto 2.5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
 }
-
 .home-card {
   background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 1.5rem 1.65rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 1.5rem;
+  width: 260px;
+  text-align: center;
+  transition: var(--transition-fast);
   text-decoration: none;
   color: var(--text-primary);
-  position: relative;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
 }
-
-.home-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(126, 163, 131, 0.35), transparent);
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
 .home-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(126, 163, 131, 0.4);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 15px rgba(126, 163, 131, 0.12);
-  background: rgba(16, 23, 38, 0.85);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
 }
-
-.home-card:hover::before {
-  opacity: 1;
-}
-
 .card-badge {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.35rem;
+  display: inline-block;
   background: var(--color-primary-glow);
-  border: 1px solid rgba(126, 163, 131, 0.25);
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  transition: transform 0.25s ease;
-  flex-shrink: 0;
-}
-
-.home-card:hover .card-badge {
-  transform: scale(1.08);
-}
-
-.home-card-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-  flex: 1;
-}
-
-.home-card h3 {
-  font-family: var(--font-title);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0;
-  line-height: 1.35;
-}
-
-.home-card p {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.55;
-  margin: 0;
-}
-
-.home-card-arrow {
   color: var(--color-primary-light);
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  align-self: flex-end;
-  opacity: 0.5;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  padding: 0.25rem 0.45rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
-
-.home-card:hover .home-card-arrow {
-  transform: translateX(4px);
-  opacity: 1;
-}
-
 .crisis-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background: linear-gradient(135deg, rgba(235, 203, 139, 0.18), rgba(235, 203, 139, 0.08));
-  border: 1px solid rgba(235, 203, 139, 0.4);
-  color: var(--color-warning);
-  padding: 0.85rem 1.75rem;
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
   border-radius: var(--radius-sm);
   text-decoration: none;
-  font-family: var(--font-title);
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-weight: 600;
   margin: 1rem auto;
   text-align: center;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 15px rgba(235, 203, 139, 0.1);
+  transition: var(--transition-fast);
 }
-
 .crisis-btn:hover {
-  background: linear-gradient(135deg, rgba(235, 203, 139, 0.28), rgba(235, 203, 139, 0.15));
-  border-color: var(--color-warning);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(235, 203, 139, 0.2);
-  color: #ffffff;
+  background: var(--color-primary-light);
 }
 
 /* ==========================================================================
@@ -2980,227 +2874,3 @@ footer {
   display: block;
   padding-top: 1.25rem;
 }
-
-/* ==========================================================================
-   MOBILE & RESPONSIVE APP-LIKE OPTIMIZATIONS (Smartphones & Tablets)
-   ========================================================================== */
-@media (max-width: 768px) {
-  /* Layout Spacing */
-  .container {
-    padding: 1rem 1rem 3.5rem 1rem !important;
-  }
-
-  main {
-    padding: 1rem 0 !important;
-    gap: 2rem !important;
-  }
-
-  /* Intro Section */
-  .intro-section {
-    margin: 1rem auto 1.75rem auto;
-  }
-
-  .intro-section h1 {
-    font-size: 1.55rem;
-    line-height: 1.35;
-    margin-bottom: 1rem;
-  }
-
-  .intro-section p {
-    font-size: 0.92rem;
-    line-height: 1.6;
-    margin-bottom: 0.65rem;
-  }
-
-  /* Home Categories: Compact App-Style List Cards */
-  .home-categories {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0.75rem !important;
-    width: 100% !important;
-    margin: 1.5rem 0 2rem 0 !important;
-  }
-
-  .home-card {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    text-align: left !important;
-    padding: 0.95rem 1.1rem !important;
-    gap: 0.9rem !important;
-    width: 100% !important;
-    border-radius: 14px !important;
-    background: rgba(16, 23, 38, 0.75) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    -webkit-tap-highlight-color: transparent !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
-    transform: none !important;
-  }
-
-  .home-card:active {
-    transform: scale(0.985) !important;
-    background: rgba(255, 255, 255, 0.06) !important;
-    border-color: rgba(126, 163, 131, 0.4) !important;
-  }
-
-  .card-badge {
-    width: 44px !important;
-    height: 44px !important;
-    min-width: 44px !important;
-    border-radius: 12px !important;
-    font-size: 1.35rem !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: rgba(126, 163, 131, 0.12) !important;
-    border: 1px solid rgba(126, 163, 131, 0.25) !important;
-    margin-bottom: 0 !important;
-    flex-shrink: 0 !important;
-  }
-
-  .home-card-info {
-    flex: 1 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0.2rem !important;
-    min-width: 0 !important;
-  }
-
-  .home-card h3 {
-    font-size: 1.02rem !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-    margin: 0 !important;
-    line-height: 1.3 !important;
-  }
-
-  .home-card p {
-    font-size: 0.8rem !important;
-    color: var(--text-secondary) !important;
-    line-height: 1.4 !important;
-    margin: 0 !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important;
-    overflow: hidden !important;
-  }
-
-  .home-card-arrow {
-    color: var(--color-primary-light) !important;
-    font-size: 1.15rem !important;
-    margin: 0 0 0 0.25rem !important;
-    align-self: center !important;
-    opacity: 0.5 !important;
-    flex-shrink: 0 !important;
-  }
-
-  .home-card:active .home-card-arrow {
-    transform: translateX(3px) !important;
-    opacity: 1 !important;
-  }
-
-  /* Crisis Button on Mobile */
-  .crisis-btn {
-    width: 100% !important;
-    padding: 0.95rem 1.25rem !important;
-    font-size: 0.95rem !important;
-    border-radius: 12px !important;
-  }
-
-  /* Section Header & Titles */
-  .section-header {
-    margin-bottom: 1.75rem !important;
-    gap: 0.45rem !important;
-  }
-
-  .section-title {
-    font-size: 1.65rem !important;
-  }
-
-  .section-subtitle {
-    font-size: 0.88rem !important;
-    line-height: 1.5 !important;
-  }
-
-  /* Glass Cards */
-  .glass-card {
-    padding: 1.25rem !important;
-    border-radius: 14px !important;
-  }
-
-  /* Filter Chips: Smooth Horizontal Swipe */
-  .filter-container {
-    display: flex !important;
-    overflow-x: auto !important;
-    scrollbar-width: none !important;
-    -webkit-overflow-scrolling: touch !important;
-    flex-wrap: nowrap !important;
-    gap: 0.5rem !important;
-    padding: 0.2rem 0.25rem 0.65rem 0.25rem !important;
-    margin: 0 -0.5rem 1.25rem -0.5rem !important;
-  }
-
-  .filter-container::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  .filter-chip, .filter-chip-ph {
-    flex-shrink: 0 !important;
-    white-space: nowrap !important;
-    font-size: 0.8rem !important;
-    padding: 0.45rem 0.85rem !important;
-  }
-
-  /* Philosophy Switcher */
-  .philosophy-exp-switcher {
-    width: 100% !important;
-    gap: 0.35rem !important;
-    padding: 0.3rem !important;
-  }
-
-  .ph-exp-btn {
-    font-size: 0.82rem !important;
-    padding: 0.55rem 0.65rem !important;
-    flex: 1 !important;
-    justify-content: center !important;
-  }
-
-  /* Grids to Single Column on Mobile */
-  .philosophy-grid-custom,
-  .pillar-tools-grid,
-  .provocation-layout,
-  .diary-layout,
-  .complication-tools-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
-  }
-
-  /* Readability Wrapper for Mobile Reading */
-  .readability-wrapper {
-    padding: 0 !important;
-  }
-
-  .readability-wrapper p {
-    font-size: 0.95rem !important;
-    line-height: 1.65 !important;
-    margin-bottom: 0.95rem !important;
-  }
-
-  .readability-wrapper blockquote {
-    padding-left: 1rem !important;
-    margin: 1.15rem 0 !important;
-    font-size: 0.98rem !important;
-  }
-
-  /* Mobile Drawer Smoothness */
-  .mobile-menu-drawer {
-    width: 85% !important;
-    max-width: 320px !important;
-  }
-
-  .mobile-nav-link {
-    padding: 0.85rem 1rem !important;
-    font-size: 0.92rem !important;
-  }
-}
-
