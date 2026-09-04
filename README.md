@@ -1,2 +1,2 @@
-# fa-a-antes-de-testar-
+# faça-antes-de-testar-
 beta do beta 
